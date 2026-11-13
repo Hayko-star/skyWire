@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all_game{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/playFon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 170px;
+}
+
+.fon_btns{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fon_btns > button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fcf89a;
+    font-size: 20px;
+    font-family: fantasy;
+    border: 1px solid black;
+    transition: background-color 0.5s;
+}
+.fon_btns > button:hover{
+    background-color: #fde720;
+}
+
+@media (max-width: 1464px) {
+    .all_game{
+        padding-bottom: 160px;
+        /* background-image: url(./img/play-fon-Android.png); */
+
+    }    
+}
+
+@media (max-width: 804px){
+    .all_game{
+        background-image: url(./img/play-fon-Android.png);
+    }    
+}
+
+.option_fon{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.452);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.option_menu{
+    width: 350px;
+    height: 350px;
+    background-color: #0451bdf5;
+    border-radius: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: menuAni 0.5s forwards;
+}
+
+@keyframes menuAni{
+    0%{
+        scale: 0;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+#audio_btn{
+    width: 170px;
+    height: 170px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.23s;
+}
+
+#audio_btn:hover{
+    width: 180px;
+    height: 180px;
+}
+
+.no_audio::after{
+    content: "";
+    width: 4px;
+    height: 240px;
+    background-color: red;
+    transform: rotate(45deg);
+    position: absolute;
+
+}
+
+.fa-solid{
+    font-size: 120px;
+    color: #868480;
+    transition: all 0.57s;
+}
+
+.audio_png:hover{
+    font-size: 130px;
+}
+
+#audio_btn:hover .fa-solid{
+    color: #fdc920d2;
+}
+
+.close_option_menu{
+    position: absolute;
+    top: 10px;
+    right: 11px;
+}
+
+
+.home{
+    font-size: 20px;
+    color:#fee840;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.home:hover{
+    color:#c24242be;
+    font-size: 22px;
+}
