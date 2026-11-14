@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .all_game{
     width: 100%;
     height: 100vh;
@@ -11,12 +13,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
+    display: flex; /* flex */
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 170px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* options */
 .fon_btns{
     display: flex;
     flex-direction: column;
@@ -59,7 +64,7 @@
     background-color: rgba(0, 0, 0, 0.452);
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -107,19 +112,19 @@
     height: 180px;
 }
 
-.no_audio::after{
+#no_audion_line{
     content: "";
     width: 4px;
-    height: 240px;
+    height: 0px;
     background-color: red;
     transform: rotate(45deg);
     position: absolute;
-
+    transition: all 0.5s;
 }
 
 .fa-solid{
     font-size: 120px;
-    color: #868480;
+    color: #fdc920d2;
     transition: all 0.57s;
 }
 
@@ -127,16 +132,11 @@
     font-size: 130px;
 }
 
-#audio_btn:hover .fa-solid{
-    color: #fdc920d2;
-}
-
 .close_option_menu{
     position: absolute;
     top: 10px;
     right: 11px;
 }
-
 
 .home{
     font-size: 20px;
@@ -146,6 +146,171 @@
 }
 
 .home:hover{
-    color:#c24242be;
-    font-size: 22px;
+    color:#c2beb2d2;
+}
+/* options */
+
+/* play Btn */
+
+#play_menu_fon{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#play_menu{
+    width: 700px;
+    height: 450px;
+    background-color: #0451bdf5;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    animation: level_menu_ani 0.5s forwards;
+}
+
+
+@media (max-width: 725px){
+    #play_menu{
+        width: 600px;
+    }
+}
+
+
+.level{
+    width: 170px;
+    height: 170px;
+    background-color: #fff;
+    color: #fcf89a;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    font-family: fantasy;
+    transition: all 0.5s;
+    border: 5px solid #fdc920d2;
+}
+
+@media (max-width: 636px){
+    #play_menu{
+        width: 400px;
+        gap: 6px;
+    }
+
+    .level{
+        width: 120px;
+        height: 120px;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 430px){
+    #play_menu{
+        width: 290px;
+        height: 290px;
+    }
+
+    .level{
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+    }
+}
+
+
+@keyframes level_menu_ani {
+    0%{
+        scale: 0;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+.level:hover{
+    scale: 1.1;
+}
+
+#LV-1{
+    background-image: url(./img/level-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#LV-2{
+    background-image: url(./img/level-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#LV-3{
+    background-image: url(./img/level-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#close_play_menu{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* play Btn */
+
+/* tramvai */
+.tramvai{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -40px;
+    top: 167px;
+    transition: all 1s;
+    transform: translateX(0)
+}
+/* tramvai */
+
+#level-1_map{
+    width: 400vw;
+    height: 100vh;
+    background-image: url(./img/level-2.jpg);
+    display: none;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.some{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+#all_borders{
+    width: 2500px;
+    height: 300px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+}
+
+#close_level{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 40px;
 }
