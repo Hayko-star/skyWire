@@ -13,7 +13,11 @@
     <div id="all_game" class="all_game">
         <img id="tramvai" src="./img/tramvay.png" class="tramvai"></img>
 
+        <div id="audio_alert" class="audio_alert_enter">
+            <h1>You can turn on the music in the settings</h1>
+        </div>
 
+        
         <!-- options -->
         <div class="fon_btns">
             <button id="play_btn">Play</button>
@@ -40,8 +44,6 @@
                 <i id="close_play_menu" class="home fa-solid fa-house"></i>
 
                 <div id="LV-1" class="level">1</div>
-                <div id="LV-2" class="level">2</div>
-                <div id="LV-3" class="level">3</div>
             </div>
         </div>
         <!-- play Btn -->
@@ -49,24 +51,61 @@
 
 
     <div id="level-1_map">
-        
+
         <div id="all_borders">
-            <div id="some" class="some"></div>
+
+            <div class="border_start">
+
+                <div id="all_pasangers" class="all_pasangers">
+                    <img id="tramvaiGM" src="./img/tranvaiForGameplay.png" alt="">
+                    <img class="pasenger pasenger-1" src="./img/passenger-1.png" alt="">
+                    <img class="pasenger pasenger-2" src="./img/passenger-2.png" alt="">
+                    <img class="pasenger pasenger-3" src="./img/passenger-3.png" alt="">
+                </div>
+            </div>
+
+            <img id="fly" class="fly" src="./img/fly.png" alt="">
+            <div id="atack"></div>
+
+            <img id="fly_up" src="./img/flyUp.gif" alt="">
+            <div id="atack_up-1"></div>
+
+            <img id="fly_up-2" src="./img/flyUp.gif" alt="">
+            <div id="atack_up-2"></div>
+
+            <div class="border_line-1"></div>
+            <div class="border_2_up"></div>
+            <div class="border_3_line"></div>
+            <div class="border_4_line"></div>
+            <div class="border_5_line"></div>
+            <div class="border_6_line"></div>
+            <div class="border_7_line"></div>
+            <div class="border_8_line"></div>
+            <div class="border_9_line"></div>
+            <div class="border_10_line"></div>
+            <div class="border_11_line"></div>
+            <div class="border_end"></div>
         </div>
 
         <i id="close_level" class="home fa-solid fa-house"></i>
-
-         
-            
-        
-
+    
+        <div id="test_alert"></div>
+    
+        <div id="lose_alert">
+            <div id="Restart_btn">
+                <h1>You Lose</h1>
+                <button id="restart_lv1">Restart</button>
+            </div>
+        </div>
+    
+        <di id="win_alert">
+            <div id="win_btns">
+                <h1>You Win</h1>
+                <button id="Win_btn">Back Home</button>
+            </div>
+        </di>
 
     </div>
-
-
-
-
-
 
     <script src="./app.js"></script>
 </body>
